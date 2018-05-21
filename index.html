@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>First site</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css" >
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+</head>
+    <body> 
+        <section id="first">
+         <!--          
+         внутри секции добавим родительский контейнер чтобы контент сдвигался. таким образом фото останется до краев, а контент сдвинется.
+        -->
+            <div class="container">
+<!--               header поможет сдвинуть контент от верха-->
+                <header>
+            
+                     <div class="mail">
+                 info@alexest88@gmail.com
+                     </div>
+             
+                     <div class="logo">
+                 <span>aleksandr</span> papiev
+                     </div>
+             
+                     <div class="phone">
+                 +(372) 56-03-96
+                     </div>
+                </header>
+                
+            <h1>
+                 web designer &amp;<span> front end web developer</span>
+            </h1>
+            
+<!-- --1.делаем КНОПКУ через тег <a>.
+       2.делаем якорь! добавляем в ссылку наш "#about" и теперь по клику на эту "ссылку-кнопку" нас перенесет во вторую секцию id="about".
+       3. добавим плавности к этому переходу через jQuery.
+       этот элемент будет работать только с классом .scrollto, поэтому через пробел прописываеми этот классю .scrollto
+-->
+               
+        <a class="button scrollto" href="#about">My website
+        </a>
+    </div>
+            
+</section>
+       
+<section id="about">
+<!--        сделали контейнер чтобы выровнять текст по центру (на всю ширину container который равен 1170px) -->
+        
+    <div class="container">
+      <h2>Who am I</h2>
+        <img src="images/sanya.png" alt="Me and guitar" class="photo" >
+        <h3 class="about-title">about me</h3>
+            <p class="about-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda architecto temporibus repudiandae dolorum adipisci labore natus, provident, nostrum asperiores soluta beatae consequuntur amet quos, a, autem. Sint, est a.Cumque consequatur vel soluta dolore tenetur illum porro magnam iure voluptatum doloremque possimus, sit repellendus? Voluptatem eum, dignissimos atque quam. Dolorum, laudantium!
+            </p>
+          
+<!--  так как следующие 3 элемента иконок(или группа других элементов) идут в одну строку(по горизонтали в одну линию) их всегда нужно оборачивать в ОБЩИЙ КОНТЕЙНЕР <div>, чтобы они не расползались кто-куда-->
+        
+<!-- также эту группу иконок можно сделать через СПИСОК -->
+         
+        <div class="social-block clearfix">
+            <a class="social vk" href="#">
+                <img src="images/vk.png" alt="vk">
+            </a>
+            <a class="social fb" href="#">
+                <img src="images/fb.png" alt="fb">
+            </a>
+            <a class="social yt" href="#">
+                <img src="images/yt.png" alt="yt">
+            </a>
+        </div>
+          
+    </div>
+</section>
+  <section id="message-form">
+    <h2>
+    Write to me
+    </h2>
+    <form class="form" action="#">
+       
+        <input type="text" placeholder="Login" class="cell">
+        <input type="email" placeholder="Email" class="cell">
+        <input type="tel" placeholder="Phone" class="cell">
+        <button type="submit" class="button button-act">Submit
+        </button>
+      
+    </form> 
+</section>
+   
+
+   
+   <footer>
+       <div class="container">
+          
+            <div class="logo">
+                 <span>aleksandr</span> papiev
+            </div>
+             
+             <div class="credits">
+                 2017 | All rights reserved
+             </div>
+             
+            <div class="phone">
+                 +(372) 56-03-96
+            </div>
+           
+           
+       </div>
+   </footer>
+   
+<!--   1 шаг. ПОДКЛЮЧАЮ jQUERY!! удаленно через cdn-сервисы. это когда я не скачиваю себе файл,а просто загружаю с чужых серверов (в данном случае с сервера jquery) это надежней! сервера их гораздо
+ быстрее чем любой хостинг который покупается мной.
+ -->
+ 
+<!-- этот скрипт устанавливает ПОСЛЕДНЮЮ ВЕРСИЮ jQuery
+  <script src="//code.jquery.com/jquery-latest.js"></script> -- ЭТО НОВАЯ ВЕРСИЯ jQuery
+  -->
+<!--   на данном сайте подключу СТАРУЮ ВЕРСИЮ jQuery. Смотри ниже скрипт.
+ -->
+  
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   
+<!--   2 шаг. подключаю свой личный файл main.js-->
+  <script type="text/javascript" src="js/main.js"></script>
+   
+    </body>
+</html>

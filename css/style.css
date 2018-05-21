@@ -1,0 +1,249 @@
+body{
+    color:black;
+    font-family: Arial, sans-serif;
+    
+} 
+#first{
+    height: 800px;
+/*    
+center - положение картинки по горизонтали,
+top - положение картинки по вертикали
+(чтобы в итоге картинка была по центру и прижата к верхнему краю )
+cover - позволит картинки всегда быть растянутой на всю ширину экрана 
+    КОД УНИВЕРСАЛЬНЫЙ можно копировать во всюда
+*/
+    background:url(../images/first.jpg) no-repeat center top / cover;
+    color: aliceblue;
+}
+ 
+/* 
+отмерили линейской в Photoshop разметку ширины 
+*/
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+/* от верхнего края сдвинули контент */
+header{
+    padding-top: 50px;
+}
+
+.mail{
+    float: left;
+    font-size: 14px;
+    background: url(../images/mail.png) no-repeat center left;
+/*   сделаем отступ от конвертика до строки */
+    padding-left: 25px;
+}
+
+.logo{
+    float:left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left:316px;
+}
+
+.logo span{
+    color: #ffb400;
+}
+
+.phone{
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    background: url(../images/phone.png) no-repeat center left;
+/*   сделаем отступ от мобила до строки */
+    padding-left: 25px;
+}
+
+h1{
+    font-size: 41px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 255px;
+    color: #ffb400;
+
+}
+
+h1 span{
+    font-size: 31px;
+    font-weight:normal;
+    color: red;
+    display: block;
+    
+}
+
+.button{
+    background: #ffb400;
+    color: black;
+    font-size: 20px;
+    text-transform:uppercase;
+    text-align: center;
+    border-radius: 3px;
+    padding: 19px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    width: 250px; 
+}
+
+h2{
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+
+#about{
+    padding-top: 65px;
+    
+}
+
+.photo{
+    display: block;
+    margin: 55px auto 25px auto;
+    border: 5px solid #ffb400;
+    border-radius: 50%;
+    width:20%;
+    
+}
+
+.about-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+       
+}
+
+.about-text{
+    text-align: center;
+    width: 560px;
+    margin:0 auto;
+    line-height: 1.2;
+}
+
+.social-block{
+    margin: 0 auto;
+    width: 120px;
+
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    width: 100%;
+    
+}
+
+/* 
+делаем у иконок черный фон (в исходниках у них прозрачный фон)
+*/
+
+.social{
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    background: black;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 31px;
+/*    между иконками расстояние 5px*/
+    margin-right: 5px; 
+/*    отступ сверху от от другого блока*/
+    margin-top: 15px;
+    
+    
+}
+
+/* чтобы все три иконки были ровно по центру(а пока не получается так как у них у всех задано margin-right: 5px;) нужно подредактировать у первой иконки это свойство. с помощью nth-child() 
+*/
+
+
+.social:nth-child(1)
+{
+    margin-left:9px;
+}
+
+.social:hover{
+    background-color:#ffb400;
+    box-shadow: 0px 0px 0px 4px #ffe4a3;
+    transform: scale(1.1);
+    
+}
+
+#message-form{
+    background: #f2f2f2;
+    padding: 60px 0px 100px 0px;
+    margin-top: 120px;
+    
+}
+
+.form{
+   width: 288px; 
+    margin: 0px auto;
+}
+
+.cell{
+    border-radius: 3px;
+    background: white;
+    display: block;
+    height: 57px;
+    padding-left: 24px;
+/*    убираем border у всех input-ов   */
+    border: 0px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+/*    отступы между полей*/
+    margin-bottom: 14px;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    
+}
+
+.button-act{
+    border:0px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 288px;
+    box-sizing: border-box;
+}
+
+footer{
+    background: black;
+    color: #acacac;
+/*    задаем высоту дял футера через padding*/
+    padding: 50px 0px;
+    
+}
+
+.credits{
+    font-size: 14px; 
+/*    добавили флоат, так как credits занимал вправо все простанство длина его 100% и тем самым сместил вниз телефон. флоат уменьшил ширину,и ширина стала равна самого содержимого credits. и телефон вернулся снова водну линейку с другими
+    */
+    float: left; 
+    
+}
+
+footer .logo{
+    margin-left: 0px;
+    margin-right: 350px;
+    
+}
+
+/*     *********** наводим красоту *******           */
+
+.button:hover{
+    background: #ffa200;
+}
+
+.button:active{
+    background: #ff7e00;
+    
+}
+
